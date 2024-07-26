@@ -6,7 +6,7 @@ const Pricing = () => {
     const pricingData = [
         {
             discount: "20% off",
-            price: "$199",
+            price: "₹199",
             title: "Basic Health Checkup",
             features: [
                 "Comprehensive physical examination",
@@ -18,7 +18,7 @@ const Pricing = () => {
         },
         {
             discount: "25% off",
-            price: "$299",
+            price: "₹299",
             title: "Advanced Health Screening",
             features: [
                 "Complete health screening",
@@ -30,7 +30,7 @@ const Pricing = () => {
         },
         {
             discount: "30% off",
-            price: "$399",
+            price: "₹399",
             title: "Wellness Package",
             features: [
                 "Full medical evaluation",
@@ -45,7 +45,7 @@ const Pricing = () => {
     return (
         <div className="bg-gray-100 text-gray-900 py-12">
             <div className="container mx-auto text-center">
-                <TextGenerateEffect words='Your Health, Our Commitment – Affordable Care Plans'></TextGenerateEffect>
+                <TextGenerateEffect words='Your Health, Our Commitment – Affordable Care Plans' />
                 <h1 className="text-3xl font-bold mb-8">Our Pricing</h1>
                 <div className="flex justify-center space-x-4">
                     {pricingData.map((plan, index) => (

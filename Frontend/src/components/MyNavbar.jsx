@@ -35,7 +35,7 @@ export default function MyNavbar() {
     <div className="relative">
       <Navbar>
         <NavbarBrand className="flex items-center">
-          <p className="font-bold text-inherit text-xl ml-2"> <Link to='/'> Med Dose </Link></p>
+          <p className="font-bold text-inherit text-xl ml-2"> <Link to='/'> Medose </Link></p>
         </NavbarBrand>
 
         {/* Desktop Menu */}
