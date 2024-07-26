@@ -61,12 +61,15 @@ function HealthStatsProject() {
                 <div className="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 mb-6">
                     <div className="flex justify-between items-center mb-4">
                         <h2 className="text-3xl font-semibold text-blue-800">Reports Data</h2>
+                        <Link to='/createnewrecord'>
                         <button
                             
                             className="bg-purple-500 hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full shadow-lg transition-transform transform hover:-translate-y-1 hover:scale-105 animate-pulse"
                         >
                             Create New Project
                         </button>
+                        </Link>
+                        
                     </div>
                     <p className="text-lg text-gray-700 mb-4">View and interact with the latest reports.</p>
                     <Table aria-label="Example table with dynamic content">
