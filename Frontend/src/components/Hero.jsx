@@ -1,6 +1,7 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
 import { Link } from 'react-router-dom';
+import MyGlobe from './MyGlobe';
 
 const Hero = () => {
   return (
@@ -11,8 +12,11 @@ const Hero = () => {
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-white opacity-80"></div>
-        
         <div className="container mx-auto text-center relative z-10">
+          {/* MyGlobe Component */}
+          {/* <div className="flex justify-center mb-8">
+            <MyGlobe />
+          </div> */}
           <h3 className="text-gray-800 text-2xl">
             <Typewriter
               words={['Best Options for you']}

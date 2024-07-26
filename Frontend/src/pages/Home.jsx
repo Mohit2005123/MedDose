@@ -5,12 +5,14 @@ import ApplicationForm from '../components/ApplicationForm.jsx';
 import Pricing from '../components/Pricing.jsx';
 import Doctors from '../components/Doctors.jsx';
 import Footer from '../components/Footer.jsx';
+import MyGlobe from '../components/MyGlobe.jsx';
 function Home() {
     return (
         <div>
            
                 <MyNavbar></MyNavbar>
                 <Hero></Hero>
+                <MyGlobe></MyGlobe>
                 <Features></Features>
                 <ApplicationForm></ApplicationForm>
                 <Pricing></Pricing>

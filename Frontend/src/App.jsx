@@ -6,6 +6,7 @@ import HealthStatsProject from './pages/HealthStatsProject';
 import StatsResult from './pages/StatsResult';
 import CreateNewRecord from './pages/CreateNewRecord';
 import ChatComponent from './pages/ChatComponent';
+import Appointments from './pages/Appointments';
 const App = () => {
   return (
     <Router>
@@ -15,7 +16,8 @@ const App = () => {
         <Route path="/healthrecords" element={<HealthStatsProject />} />
         <Route path="/statsresult" element={<StatsResult />} />
         <Route path='/createnewrecord' element={<CreateNewRecord></CreateNewRecord>} />
-        <Route path="/chats" element={<ChatComponent />} />
+        <Route path="/appointments" element={<Appointments />} />
+        
       </Routes>
     </Router>
   );
