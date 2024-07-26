@@ -69,7 +69,7 @@ const TextGenerateEffect = ({
   return (
     <div className={cn("font-bold", className)} ref={ref}>
       <div className="mt-4 text-center">
-        <div className="text-white text-3xl font-semibold leading-snug tracking-wide">
+        <div className="text-black text-3xl font-semibold leading-snug tracking-wide">
           {renderWords()}
         </div>
       </div>

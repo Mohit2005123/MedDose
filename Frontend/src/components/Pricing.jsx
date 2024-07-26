@@ -1,75 +1,71 @@
 // src/Pricing.js
 import React from 'react';
-import  TextGenerateEffect  from './ui/TextGenerateEffect.jsx';
-// import { AppleCardsCarouselDemo } from './ui/AppleCardsCarousel.jsx'; // Adjust the import path
+import TextGenerateEffect from './ui/TextGenerateEffect.jsx';
 
 const Pricing = () => {
     const pricingData = [
         {
             discount: "20% off",
             price: "$199",
-            title: "Personal Driving",
+            title: "Basic Health Checkup",
             features: [
-                "Full course theory",
-                "Full driving course",
-                "Training in first aid",
-                "Practical sessions",
-                "Psychological support"
+                "Comprehensive physical examination",
+                "Basic lab tests",
+                "Blood pressure monitoring",
+                "Health consultation",
+                "Follow-up support"
             ]
         },
         {
-            discount: "20% off",
-            price: "$199",
-            title: "Personal Driving",
+            discount: "25% off",
+            price: "$299",
+            title: "Advanced Health Screening",
             features: [
-                "Full course theory",
-                "Full driving course",
-                "Training in first aid",
-                "Practical sessions",
-                "Psychological support"
+                "Complete health screening",
+                "Advanced diagnostic tests",
+                "Nutritional consultation",
+                "Personalized health plan",
+                "24/7 support"
             ]
         },
         {
-            discount: "20% off",
-            price: "$199",
-            title: "Personal Driving",
+            discount: "30% off",
+            price: "$399",
+            title: "Wellness Package",
             features: [
-                "Full course theory",
-                "Full driving course",
-                "Training in first aid",
-                "Practical sessions",
-                "Psychological support"
+                "Full medical evaluation",
+                "Specialist consultations",
+                "Customized wellness program",
+                "Stress management session",
+                "Ongoing health monitoring"
             ]
         }
     ];
 
     return (
-        <div className="bg-gray-900 text-white py-12">
+        <div className="bg-gray-100 text-gray-900 py-12">
             <div className="container mx-auto text-center">
-                <TextGenerateEffect words='Your Health, Our Priority – Fair Pricing Guaranteed'></TextGenerateEffect>
+                <TextGenerateEffect words='Your Health, Our Commitment – Affordable Care Plans'></TextGenerateEffect>
                 <h1 className="text-3xl font-bold mb-8">Our Pricing</h1>
                 <div className="flex justify-center space-x-4">
                     {pricingData.map((plan, index) => (
-                        <div key={index} className="bg-gray-800 p-6 rounded-lg shadow-lg max-w-sm">
+                        <div key={index} className="bg-white p-6 rounded-lg shadow-lg max-w-sm border border-gray-300">
                             <div className="mb-4">
-                                <span className="text-yellow-500 font-bold">{plan.discount}</span>
+                                <span className="text-green-500 font-bold">{plan.discount}</span>
                                 <h3 className="text-4xl font-bold">{plan.price}</h3>
-                                <p className="text-lg">{plan.title}</p>
+                                <p className="text-lg font-semibold">{plan.title}</p>
                             </div>
-                            <ul className="mb-6 space-y-2">
+                            <ul className="mb-6 space-y-2 text-left">
                                 {plan.features.map((feature, index) => (
-                                    <li key={index} className="text-gray-400">{feature}</li>
+                                    <li key={index} className="text-gray-700">{feature}</li>
                                 ))}
                             </ul>
-                            <button className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg font-bold">
+                            <button className="bg-teal-500 hover:bg-teal-600 text-white py-2 px-4 rounded-lg font-bold">
                                 Get Started
                             </button>
                         </div>
                     ))}
                 </div>
-                {/* <div className="mt-16">
-                    <AppleCardsCarouselDemo />
-                </div> */}
             </div>
         </div>
     );

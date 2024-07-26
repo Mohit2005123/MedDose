@@ -3,7 +3,7 @@ import Hero from '../components/Hero.jsx';
 import Features from '../components/Features.jsx';
 import ApplicationForm from '../components/ApplicationForm.jsx';
 import Pricing from '../components/Pricing.jsx';
-import Instructors from '../components/Instrucure.jsx';
+import Doctors from '../components/Doctors.jsx';
 import Footer from '../components/Footer.jsx';
 function Home() {
     return (
@@ -14,9 +14,8 @@ function Home() {
                 <Features></Features>
                 <ApplicationForm></ApplicationForm>
                 <Pricing></Pricing>
-                <Instructors></Instructors>
+                <Doctors></Doctors>
                 <Footer></Footer>
-            
         </div>
     )
 }

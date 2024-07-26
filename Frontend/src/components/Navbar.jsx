@@ -14,7 +14,7 @@ const Navbar = () => {
       <header className="bg-[#0C2B4B] relative shadow-lg">
         <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
           <div className="flex lg:w-1/4 w-full items-center p-2 bg-yellow-500">
-            <img src="img/logo.webp" className="p-4" alt="logo" />
+            <img src="" className="p-4" alt="logo" />
           </div>
           <div className="lg:hidden flex justify-end w-full">
             <button onClick={toggleMenu} className="text-white p-2 focus:outline-none">
