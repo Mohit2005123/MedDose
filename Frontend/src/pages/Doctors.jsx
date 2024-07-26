@@ -1,6 +1,6 @@
 // src/pages/Doctors.js
 import React, {useState} from 'react';
-import Navbar from '../components/Navbar';
+import Navbar from '../components/MyNavbar';
 import Footer from '../components/Footer';
 import DoctorCard from '../components/DoctorCard';
 

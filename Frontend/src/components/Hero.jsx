@@ -1,18 +1,19 @@
 import React from 'react';
 import { Typewriter } from 'react-simple-typewriter';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
     <div>
       <section
-        className="relative flex items-center h-[850px] bg-cover bg-top"
-        style={{ backgroundImage: `url(/images/backgroundImage.jpg)` }}
+        className="relative flex items-center justify-center h-[850px] bg-cover bg-top bg-fixed"
+        style={{ backgroundImage: `url(https://i.pinimg.com/736x/32/c3/ea/32c3eaaed26fa73510851bc7ffdbf0fa.jpg)` }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black opacity-50"></div>
+        <div className="absolute inset-0 bg-white opacity-80"></div>
         
-        <div className="container mx-auto text-center relative">
-          <h3 className="text-white text-2xl">
+        <div className="container mx-auto text-center relative z-10">
+          <h3 className="text-gray-800 text-2xl">
             <Typewriter
               words={['Best Options for you']}
               loop={1}
@@ -23,7 +24,7 @@ const Hero = () => {
               delaySpeed={1000}
             />
           </h3>
-          <h1 className="text-white text-5xl font-bold italic py-5">
+          <h1 className="text-gray-900 text-5xl font-bold italic py-5 animate-bounce">
             <Typewriter
               words={['A healthy dose of solutions']}
               loop={1}
@@ -34,9 +35,28 @@ const Hero = () => {
               delaySpeed={1000}
             />
           </h1>
-          <div>
-            <a href="#" className="btn bg-yellow-500 text-white font-bold py-2 px-6 mr-2">Analyse your Healh Stats</a>
-            <a href="#" className="btn bg-[#0C2B4B] text-white font-bold py-2 px-6"> Find medicines near you</a>
+          <p className="text-gray-700 text-xl mb-8 animate-fade-in">
+            Your health, our priority. Discover solutions that work best for you.
+          </p>
+          <div className="flex justify-center space-x-4">
+            <Link
+              to="/healthrecords"
+              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded-lg transition duration-300 transform hover:scale-105"
+            >
+              Analyse your Health Stats
+            </Link>
+            <Link
+              to="/medicines"
+              className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-lg transition duration-300 transform hover:scale-105"
+            >
+              Find medicines near you
+            </Link>
+            <Link
+              to="/doctors"
+              className="bg-teal-500 hover:bg-teal-600 text-white font-bold py-2 px-6 rounded-lg transition duration-300 transform hover:scale-105"
+            >
+              Connect with our Doctors
+            </Link>
           </div>
         </div>
       </section>
@@ -45,3 +65,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

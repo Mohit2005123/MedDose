@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import HealthStatsChart from '../components/HealthStatsChart';
-import Navbar from "../components/Navbar";
+import Navbar from "../components/MyNavbar";
 import Footer from "../components/Footer";
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import { Fade } from 'react-awesome-reveal';
+import { Typewriter } from 'react-simple-typewriter';
+import { Puff } from 'react-loader-spinner';
 
 const healthData = [
   [
@@ -36,6 +39,15 @@ const healthData = [
 ];
 
 function StatsResult() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate data fetching or chart rendering delay
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000); // Adjust timeout as needed
+  }, []);
+
   const exportPDF = () => {
     const input = document.getElementById('charts-container');
     html2canvas(input).then((canvas) => {
@@ -46,33 +58,73 @@ function StatsResult() {
       const imgHeight = canvas.height * imgWidth / canvas.width;
       let heightLeft = imgHeight;
       let position = 0;
-      
+
       pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
       heightLeft -= pageHeight;
-      
+
       while (heightLeft >= 0) {
         position = heightLeft - imgHeight;
         pdf.addPage();
         pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
         heightLeft -= pageHeight;
       }
-      
+
       pdf.save('charts.pdf');
     });
   };
 
   return (
-    <div>
+    <div className="bg-gradient-to-r from-blue-100 to-green-100 min-h-screen">
       <Navbar />
-      <h1 className="text-4xl font-bold text-center text-blue-900 mb-4">Health Stats</h1>
-      <button 
-        onClick={exportPDF} 
-        className="bg-blue-500 text-white py-2 px-4 rounded mb-4"
-      >
-        Export to PDF
-      </button>
-      <div id="charts-container">
-        <HealthStatsChart data={healthData} />
+      <div className="container mx-auto py-12">
+        <Fade direction="up">
+          <h1 className="text-5xl font-bold text-center text-blue-900 mb-4 animate-pulse">
+            Health Record Stats
+          </h1>
+          <div className="text-center text-gray-700 mb-8">
+            <Typewriter
+              words={[
+                "Track your health metrics effortlessly.",
+                "Get insights into your wellness trends.",
+                "Optimize your health with our tools.",
+                "Empower your well-being with data."
+              ]}
+              loop={true}
+              cursor
+              cursorStyle="_"
+              typeSpeed={60}
+              deleteSpeed={40}
+              delaySpeed={1000}
+            />
+          </div>
+        </Fade>
+        <div className="bg-white p-8 rounded-lg shadow-lg transform transition-transform hover:scale-105">
+          {loading ? (
+            <div className="flex justify-center items-center h-96">
+              <Puff
+                color="#00BFFF"
+                height={100}
+                width={100}
+                timeout={3000} // Adjust timeout as needed
+              />
+            </div>
+          ) : (
+            <>
+              <Fade direction="up">
+                <h2 className="text-4xl font-semibold text-blue-800 mb-6">Reports Data</h2>
+                <button
+                  onClick={exportPDF}
+                  className="bg-indigo-500 hover:bg-indigo-600 text-white py-3 px-6 rounded-lg mb-6 shadow-lg transition duration-300 transform hover:-translate-y-1"
+                >
+                  Export to PDF
+                </button>
+                <div id="charts-container" className="min-h-96">
+                  <HealthStatsChart data={healthData} />
+                </div>
+              </Fade>
+            </>
+          )}
+        </div>
       </div>
       <Footer />
     </div>

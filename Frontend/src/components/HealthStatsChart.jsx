@@ -10,10 +10,22 @@ import {
   Legend,
   TimeScale,
   CategoryScale,
+  Filler // Import the Filler plugin
 } from "chart.js";
 import 'chartjs-adapter-date-fns'; // Import the date adapter
 
-ChartJS.register(LineElement, PointElement, LinearScale, Title, Tooltip, Legend, TimeScale, CategoryScale);
+// Register the necessary components and plugins
+ChartJS.register(
+  LineElement,
+  PointElement,
+  LinearScale,
+  Title,
+  Tooltip,
+  Legend,
+  TimeScale,
+  CategoryScale,
+  Filler // Register the Filler plugin
+);
 
 const colors = [
   "rgba(75, 192, 192, 1)", // Teal
@@ -39,7 +51,7 @@ const HealthStatsChart = ({ data }) => {
           data: values,
           borderColor: color,
           backgroundColor: color.replace('1)', '0.3)'),
-          fill: true,
+          fill: true, // Enable the fill option
           borderWidth: 2,
           tension: 0.3, // Adjust this value for more pronounced curves
         },
@@ -71,8 +83,6 @@ const HealthStatsChart = ({ data }) => {
             return `${label}: ${value} ${unit} (Recorded at: ${date})`;
           },
         },
-        // Format the tooltip value and label
-        // (Removed redundant `callbacks` here)
       },
     },
     scales: {

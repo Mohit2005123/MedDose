@@ -1,4 +1,4 @@
-import Navbar from '../components/Navbar.jsx';
+import MyNavbar from '../components/MyNavbar.jsx';
 import Hero from '../components/Hero.jsx';
 import Features from '../components/Features.jsx';
 import ApplicationForm from '../components/ApplicationForm.jsx';
@@ -9,7 +9,7 @@ function Home() {
     return (
         <div>
            
-                <Navbar></Navbar>
+                <MyNavbar></MyNavbar>
                 <Hero></Hero>
                 <Features></Features>
                 <ApplicationForm></ApplicationForm>
