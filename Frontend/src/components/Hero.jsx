@@ -50,10 +50,10 @@ const Hero = () => {
               Analyse your Health Stats
             </Link>
             <Link
-              to="/medicines"
+              to="/blog"
               className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-lg transition duration-300 transform hover:scale-105"
             >
-              Find medicines near you
+              Checkout Our Blog
             </Link>
             <Link
               to="/doctors"
