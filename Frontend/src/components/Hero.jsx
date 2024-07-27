@@ -8,7 +8,7 @@ const Hero = () => {
     <div>
       <section
         className="relative flex items-center justify-center h-[850px] bg-cover bg-top bg-fixed"
-        style={{ backgroundImage: `url(https://i.pinimg.com/736x/32/c3/ea/32c3eaaed26fa73510851bc7ffdbf0fa.jpg)` }}
+        style={{ backgroundImage: `url(/images/backgroundImage.jpg)` }}
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-white opacity-80"></div>
